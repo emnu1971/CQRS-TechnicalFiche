@@ -8,6 +8,17 @@ using Logic.Utils;
 
 namespace Logic.AppServices
 {
+    /// <summary>
+    /// Author  : Emmanuel Nuyttens
+    /// Purpose : Returns a list of students which are registered in the database.
+    ///           And allows to filter students for a particular course or a particular number of courses.
+    ///           This query is part of the Read-Side of CQRS and does not need the domain model at all !
+    ///           Here we do not need the DbContext and EF ORM (equivalent to SessionFactory in NHibernate) but rather direct connection to the database
+    ///           using plain ADO.NET code, this to be able to manually create optimized (denormalized) read-queries.
+    ///           This direct connection is represented by the QueriesConnectionString class.
+    ///           
+    /// 
+    /// </summary>
     public sealed class GetListQuery : IQuery<List<StudentDto>>
     {
         public string EnrolledIn { get; }
@@ -30,6 +41,8 @@ namespace Logic.AppServices
 
             public List<StudentDto> Handle(GetListQuery query)
             {
+                
+                // enhanced query-method
                 string sql = @"
                     SELECT s.StudentID Id, s.Name, s.Email,
 	                    s.FirstCourseName Course1, s.FirstCourseCredits Course1Credits, s.FirstCourseGrade Course1Grade,

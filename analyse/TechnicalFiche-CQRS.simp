@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="12.60" multi-file="no" uid="simpb361569f926d4e21a12dabc16009612a">
+  <meta>
+    <name>TechnicalFiche-CQRS</name>
+    <authors>Nuyttens Emmanuel</authors>
+    <description>Technical fiche for Command &amp; Query Responsibility Segregation</description>
+  </meta>
+  <counters>
+    <entity-names />
+    <entity-ids />
+    <diagrams />
+    <fields />
+  </counters>
+  <alias-groups />
+  <management uid="md-ba986c991e66497e91b5d67f00066fe2" name="" task-id-sequence="0">
+    <persons>
+      <person id="">
+        <first-name>Nuyttens</first-name>
+        <last-name>Emmanuel</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-eb03bf8cafc34dd8a74152ffe113d2a8" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types />
+  </types>
+  <items />
+  <models />
+</sim-project>
